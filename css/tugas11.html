@@ -1,0 +1,70 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<form name=ee>
+<script>
+function proses()
+	{
+	 var jabatan=document.ee.jabatan.value
+	 if(jabatan=="MANAGER") var gaji=15000000;
+	 document.ee.gaji.value=gaji;
+	 if(jabatan=="HRD") var gaji=8000000;
+	 document.ee.gaji.value=gaji;
+	 if(jabatan=="STAF") var gaji=4000000;
+	 document.ee.gaji.value=gaji;
+	 if(jabatan=="OB") var gaji=2000000;
+	 document.ee.gaji.value=gaji;
+	 
+	 var anak=document.ee.anak.value
+	 if(anak=="1") var tunjangan=1000000;
+	 document.ee.tunjangan.value=tunjangan;	
+	 if(anak=="2") var tunjangan=2000000;
+	 document.ee.tunjangan.value=tunjangan;
+	 if(anak=="3") var tunjangan=3000000;
+	 document.ee.tunjangan.value=tunjangan;	
+	 
+	 var total=document.ee.total.value
+	 document.ee.total.value=gaji+tunjangan;
+	}
+	
+function reset()
+{
+	document.ee.gaji.value="";
+	document.ee.tunjangan.value="";
+	document.ee.total.value="";
+}
+
+</script>
+<div class="w3-panel w3-grey">
+<center>
+<h1> Program gaji karyawan
+</div>
+
+<div class="w3-panel w3-blue w3-card-4">
+<p>
+<center>
+<table>
+	<tr><td>Nama pegawai<td><input class="w3-input" name="nama">
+	<tr><td>jabatan<td><select class="w3-select" name="jabatan">
+	<option>MANAGER
+	<option>HRD
+	<option>STAF
+	<option>OB
+	</select>
+	<tr><td>jumlah anak<td><input class="w3-radio" type="radio" name="anak" value="1">1
+	<input class="w3-radio" type="radio" name="anak" value="2">2
+	<input class="w3-radio" type="radio" name="anak" value="3">3
+	<tr><td colspan=2><hr> 
+	<tr><td>gaji pokok<td><input class="w3-input" name="gaji">
+	<tr><td>tunjangan<td><input class="w3-input" name="tunjangan">
+	<tr><td>gaji total<td><input class="w3-input" name="total">
+</table>
+</p>
+</div>
+
+<div class="w3-panel w3-gray">
+<p>
+<center>
+<input type=button class="w3-green" value=submit onclick="proses()">
+<input type=button class="w3-red" value=reset onclick="reset()">
+</div>
+	

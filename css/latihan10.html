@@ -1,0 +1,50 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial scale=1">
+<link rel="stylesheet" href="w3.css">
+<form name=form1>
+<script>
+function proses()
+{
+ var P=document.form1.panjang.value;
+ var L=document.form1.lebar.value;
+ var luas=P*L;
+ document.form1.luas.value=luas;
+ var keliling=P*2+L*2
+ document.form1.keliling.value=keliling;
+
+
+}
+
+function reset()
+{
+document.form1.lebar.value=0;
+document.form1.panjang.value=0;
+document.form1.luas.value=0;
+document.form1.keliling.value=0;
+}
+</script>
+<div class="w3-container">
+	<div class="w3-panel w3-brown">
+	<center>
+	<h1>penggunaan tombol atau button</h1>
+</div>
+	
+<div class="w3-panel w3-blue w3-card-4">
+<p>
+	<center>
+		<table>
+			<tr><td>Panjang<td>:<input name="panjang">
+			<tr><td>Lebar<td>:<input name="lebar">
+			<tr><td colspan=2><hr>
+			<tr><td>Luas<td>:<input name="luas">
+			<tr><td>Keliling<td>:<input name="keliling">
+		</table>
+</div>
+			
+<div class="w3-panel w3-green w3-card-4">
+<p>
+	<input type="button" class="w3-btn w3-purple" value="submit" onclick="proses()">
+	<input type="button" class="w3-btn w3-purple" value="reset" onclick="proses()">
+
+<body>

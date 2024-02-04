@@ -1,0 +1,96 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<form name=gg>
+<script>
+function proses()
+	{
+	var kota=document.gg.kota.value;
+	var kurir=document.gg.kurir.value;
+	var jenis=document.gg.jenis.value;
+	var berat=document.gg.berat.value;
+	if ((kota=="BANDUNG")&&(kurir=="JNE")&&(jenis=="Ekonomi")) var harga=5000;
+	if ((kota=="BANDUNG")&&(kurir=="JNE")&&(jenis=="Regular")) var harga=6000;
+	if ((kota=="BANDUNG")&&(kurir=="JNE")&&(jenis=="Kilat")) var harga=7000;
+	
+	if ((kota=="BANDUNG")&&(kurir=="TIKI")&&(jenis=="Ekonomi")) var harga=6000;
+	if ((kota=="BANDUNG")&&(kurir=="TIKI")&&(jenis=="Regular")) var harga=7000;
+	if ((kota=="BANDUNG")&&(kurir=="TIKI")&&(jenis=="Kilat")) var harga=8000;
+	
+	if ((kota=="BANDUNG")&&(kurir=="ANTERAJA")&&(jenis=="Ekonomi")) var harga=7000;
+	if ((kota=="BANDUNG")&&(kurir=="ANTERAJA")&&(jenis=="Regular")) var harga=8000;
+	if ((kota=="BANDUNG")&&(kurir=="ANTERAJA")&&(jenis=="Kilat")) var harga=9000;
+	
+	if ((kota=="JAKARTA")&&(kurir=="JNE")&&(jenis=="Ekonomi")) var harga=5000;
+	if ((kota=="JAKARTA")&&(kurir=="JNE")&&(jenis=="Regular")) var harga=6000;
+	if ((kota=="JAKARTA")&&(kurir=="JNE")&&(jenis=="Kilat")) var harga=7000;
+	
+	if ((kota=="JAKARTA")&&(kurir=="TIKI")&&(jenis=="Ekonomi")) var harga=6000;
+	if ((kota=="JAKARTA")&&(kurir=="TIKI")&&(jenis=="Regular")) var harga=7000;
+	if ((kota=="JAKARTA")&&(kurir=="TIKI")&&(jenis=="Kilat")) var harga=8000;
+	
+	if ((kota=="JAKARTA")&&(kurir=="ANTERAJA")&&(jenis=="Ekonomi")) var harga=7000;
+	if ((kota=="JAKARTA")&&(kurir=="ANTERAJA")&&(jenis=="Regular")) var harga=8000;
+	if ((kota=="JAKARTA")&&(kurir=="ANTERAJA")&&(jenis=="Kilat")) var harga=9000;
+	
+	if ((kota=="SURABAYA")&&(kurir=="JNE")&&(jenis=="Ekonomi")) var harga=5000;
+	if ((kota=="SURABAYA")&&(kurir=="JNE")&&(jenis=="Regular")) var harga=6000;
+	if ((kota=="SURABAYA")&&(kurir=="JNE")&&(jenis=="Kilat")) var harga=7000;
+	
+	if ((kota=="SURABAYA")&&(kurir=="TIKI")&&(jenis=="Ekonomi")) var harga=6000;
+	if ((kota=="SURABAYA")&&(kurir=="TIKI")&&(jenis=="Regular")) var harga=7000;
+	if ((kota=="SURABAYA")&&(kurir=="TIKI")&&(jenis=="Kilat")) var harga=8000;
+	
+	if ((kota=="SURABAYA")&&(kurir=="ANTERAJA")&&(jenis=="Ekonomi")) var harga=7000;
+	if ((kota=="SURABAYA")&&(kurir=="ANTERAJA")&&(jenis=="Regular")) var harga=8000;
+	if ((kota=="SURABAYA")&&(kurir=="ANTERAJA")&&(jenis=="Kilat")) var harga=9000;
+	
+	
+	document.gg.harga.value=harga;
+	
+	
+	
+	
+	}
+	
+function reset()
+{
+	document.gg.harga.value="";
+	document.gg.total.value="";
+}
+
+</script>
+<div class="w3-panel w3-cyan">
+<center>
+<h1> 	PROGRAM GAJI PEGAWAI
+</div>
+
+<div class="w3-panel w3-blue w3-card-4">
+<p>
+<center>
+<table>
+	<tr><td>Nama Pegawai<td><input class="w3-input" name="nama">
+	<tr><td>Jenis<td><input class="w3-radio" type="radio" name="jenis" value="keuangan">Keuangan
+	<br>
+	<input class="w3-radio" type="radio" name="jenis" value="produksi">Produksi
+	<br>
+	<input class="w3-radio" type="radio" name="jenis" value="pemasangan">Pemasangan
+	<tr><td>Golongan<td><select class="w3-select" name="gol">
+	<option>A
+	<option>B
+	<option>C
+	</select>
+	<tr><td>Berat<td><input type="w3-input" name="berat"><td>KG
+	<tr><td colspan=2><hr> 
+	<tr><td>Harga<td><input class="w3-input" name="harga">
+	<tr><td>Total<td><input class="w3-input" name="total">
+</table>
+</p>
+</div>
+
+<div class="w3-panel w3-gray">
+<p>
+<center>
+<input type=button class="w3-red" value=submit onclick="proses()">
+<input type=button class="w3-green" value=reset onclick="reset()">
+</div>
+	
